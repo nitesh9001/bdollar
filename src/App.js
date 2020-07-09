@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Landing from '../src/component/Dashboard/Landing';
+require('dotenv').config({path: __dirname + '/.env'})
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+          <div className="App">  
+            {/* <ReactNotification />         */}
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/homepage" component={Landing} />
+            {/* <Switch>
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute exact path="/loading" component={Loading} />
+            </Switch> */}
+          </div>
+        </Router>
     </div>
   );
 }
