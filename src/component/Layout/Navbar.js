@@ -17,7 +17,7 @@ export default function DashNavbar() {
             <NavLink to="/blog" className="navlink_pages">Blog</NavLink>
             <NavLink to="/aboutus" className="navlink_pages">About Us</NavLink>
             <NavLink to="/contactus"  className="navlink_pages">Contact Us</NavLink>
-            <NavLink to="/contactus"  className="navlink_pages">Sign in</NavLink>
+            <NavLink to="/login"  className="navlink_pages">Sign in</NavLink>
           </div>
            </div>
           </div>

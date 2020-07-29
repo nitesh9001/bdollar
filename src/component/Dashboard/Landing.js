@@ -57,6 +57,7 @@ function Landing() {
        return (
        <Fragment>
        <DashNavbar/>
+
        <div className="full_display_screen_windows">
          <div className="Inner_body_landing">
            <div className="img_text" style={{width:"30%"}}>
@@ -120,7 +121,7 @@ function Landing() {
             </div>
      </div>
        <div className="innerbody_highlight_aboutus">
-       <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:"absolute",width:"98%", zIndex:-1}}>
+       <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:"absolute",width:"98%", zIndex:-1}} >
   <defs>
     <clipPath id="clip-Web_1920_1">
       <rect width="1920" height="1080"/>
