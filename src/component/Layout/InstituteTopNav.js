@@ -1,5 +1,6 @@
 import React ,{useState}from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
+import p_user from '../../Assets/icons_use.png'
 
 
 function InstituteTopNav() {
@@ -14,19 +15,23 @@ function InstituteTopNav() {
             <div className="institute_top_nav_outline_section_inner">
                 <div className="institute_top_nav_outline_section_inner_part1">
                    <div className="institute_top_nav_outline_section_inner_part1_init">
-                   <Link to="/" className="link_to_dashboard"><i class="fa fa-sticky-note"></i><span className="span_tooltip">Notice</span></Link>
+                   <NavLink to="/notice-board-institute" className="link_to_dashboard" activeClassName="navbar__link__top active"><i class="fa fa-sticky-note"></i><span className="span_tooltip">Notice</span></NavLink>
                    </div>
                    <div className="institute_top_nav_outline_section_inner_part1_init">
-                   <Link to="/" className="link_to_dashboard"><i class="fa fa-pencil-square"></i>
-                   <span className="span_tooltip">Todo</span></Link>
+                   <NavLink to="/todo-institute" className="link_to_dashboard" activeClassName="navbar__link__top active"><i class="fa fa-pencil-square"></i>
+                   <span className="span_tooltip">Todo</span></NavLink>
                    </div>
                    <div className="institute_top_nav_outline_section_inner_part1_init">
-                   <Link to="/" className="link_to_dashboard"><i class="fa fa-calendar-check-o"></i>
-                   <span className="span_tooltip">Meeting</span></Link>
+                   <NavLink to="/meeting-orgainzer" className="link_to_dashboard" activeClassName="navbar__link__top active"><i class="fa fa-calendar-check-o"></i>
+                   <span className="span_tooltip">Meeting</span></NavLink>
                    </div>
                    <div className="institute_top_nav_outline_section_inner_part1_init">
-                   <Link to="/" className="link_to_dashboard"><i class="fa fa-money"></i>
-                   <span className="span_tooltip">Fess-details</span></Link>
+                   <NavLink to="/leave_application" className="link_to_dashboard" activeClassName="navbar__link__top active"><i class="fa fa-paperclip"></i>
+                   <span className="span_tooltip">Leave Application</span></NavLink>
+                   </div>
+                   <div className="institute_top_nav_outline_section_inner_part1_init">
+                   <NavLink to="/fee-structre-and-fee-details" className="link_to_dashboard" activeClassName="navbar__link__top active"><i class="fa fa-money"></i>
+                   <span className="span_tooltip">Fess-details</span></NavLink>
                    </div>
                 </div>                
                 <div className="institute_top_nav_outline_section_inner_part1">
@@ -36,7 +41,27 @@ function InstituteTopNav() {
                    </div>
                    <div className="notification_box_for_institute_dashboard">
                      <button className="btn_icon_notification"><i class="fa fa-bell"></i>
-                     <span className="span_tooltip">Notification</span>
+                     <div className="span_tooltip_notification">
+                     <div className="traingle"></div>
+                     <div className="notification_bar_header">
+                     <div><i class="fa fa-bell-o"></i></div>
+                     <div><h2>Notification</h2></div>
+                     <div><i class="fa fa-cog"></i></div>
+                     </div>
+                     <ul className="ul_list_of_notification" style={{background:"white"}}>
+                      
+                       <li className="ul_li_list_of_notification">
+                         <img  alt="img" src={p_user} />
+                         <div className="main_content_of_notification_bar">
+                          <span style={{color:"#17a2b8",fontWeight:"bold"}}>Name</span><p>heloo lets start the session</p>
+                         </div>
+                         <div>
+                           <spna style={{color:"green"}}>12:10 am</spna>
+                         </div>
+                       </li>
+                       </ul> 
+                     <div className="notification_bar_bottom"><Link to="/" className="link_to_see_notification">See all incoming activity</Link></div>
+                     </div>
                      </button>
                    </div>
                    <div className="logout_box_for_institute_dashboard">
