@@ -7,12 +7,6 @@ import { Link } from 'react-router-dom';
 import technology from '../../Assets/technology.png';
 import system from '../../Assets/systemsIntegration.png';
 import inovative from '../../Assets/inovation.png';
-import website_img from '../../Assets/websites.png';
-import seo_img from '../../Assets/seo.png';
-import saas_img from '../../Assets/saas.png';
-import pcsoft_img from '../../Assets/pcsoft.png';
-import appsoft_img from '../../Assets/appsoft.png';
-import digital_img from '../../Assets/digital.png';
 import ScrollToTop from '../Layout/scrollToTop';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
@@ -20,6 +14,7 @@ import Aos from 'aos';
 import Footer from '../Layout/Footer'
 import "aos/dist/aos.css";
 import '../../slider-Animation.css';
+import ProgreeBarPage from '../Layout/ProgreeBarPage';
  
 function Landing() {
     useEffect(()=>{
@@ -29,6 +24,51 @@ function Landing() {
         delay: 1,
         disable: 'mobile'})
     },[]);
+    const service_data=[
+      {id:"1",
+       servicesicon:"fa fa-cogs" ,
+       services_name:"Service_one",
+       services_deatils:"sdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbgdsdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg" ,
+       service_img: 'appsoft.png' , 
+       service_animation:"fade-left"},
+     {id:"2",
+      servicesicon:"fa fa-cogs" ,
+      services_name:"Service_one" ,  
+      services_deatils:"dsdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbgsdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg",
+      service_img:"seo.png", 
+      service_animation:"fade-right"},
+     {id:"3", 
+      servicesicon:"fa fa-cogs" , 
+      services_name:"Service_one",   
+      services_deatils:"dsdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg sdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg",
+      service_img:"saas.png", 
+      service_animation:"fade-left"},
+     {id:"4", 
+     servicesicon:"fa fa-cogs" , 
+     services_name:"Service_one",  
+     services_deatils:"dsdnjd dbfjbfj hjbthjbs hbvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg sfbshfbhjf nf jhfbsfbkjf fbhfbsjnf snfbuisbsmnf jhfbjf skfnsjk msfnisfbskmf skjfbjs hfbsfbkjf fbhfbsjnf snfbuisbsmnbfmnsfbuisf nmbfuzygfsnf nmbfuisbf smnf hsgfsf sn nhsvfusdbfhjm" , 
+     service_img:"pcsoft.png", 
+     service_animation:"fade-right"},
+     {id:"5", 
+     servicesicon:"fa fa-cogs" , 
+     services_name:"Service_one",  
+     services_deatils:"dsdnjd dbfjbfj hjbthjbs hbsfbshfbhjf nf jhfbsfbkjf fbhfbsjnf snfbuisbsmnf jhfbjf skfnsjk msfnisfbskmf skjfbjs fjskfbjhsfn, fsjkfbshf sm,fui  f hfvjsf snfbusifbskf mnbfuidsbfmnsfbuisf nmbfuzygfsnf nmbfuisbf smnf hsgfsf sn nhsvfusdbfhjmvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg",
+     service_img:"digital.png",
+     service_animation:"fade-left"},
+    //  {id:"6", 
+    //  servicesicon:"fa fa-cogs" , 
+    //  services_name:"Service_one",  
+    //  services_deatils:"dsdnjd dbfjbfj hjbthjbs hbsfbshfbhjf nf jhfbsfbkjf fbhfbsjnf snfbuisbsmnf jhfbjf skfnsjk msfnisfbskmf skjfbjs fjskfbjhsfn, fsjkfbshf sm,fui  f hfvjsf snfbusifbskf mnbfuidsbfmnsfbuisf nmbfuzygfsnf nmbfuisbf smnf hsgfsf sn nhsvfusdbfhjmvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg",
+    //  service_img:"", 
+    //  service_animation:"fade-right"},
+    //  {id:"7", 
+    //  servicesicon:"fa fa-cogs" , 
+    //  services_name:"Service_one",  
+    //  services_deatils:"dsdnjd dbfjbfj hjbthjbs hbsfbshfbhjf nf jhfbsfbkjf fbhfbsjnf snfbuisbsmnf jhfbjf skfnsjk msfnisfbskmf skjfbjs fjskfbjhsfn, fsjkfbshf sm,fui  f hfvjsf snfbusifbskf mnbfuidsbfmnsfbuisf nmbfuzygfsnf nmbfuisbf smnf hsgfsf sn nhsvfusdbfhjmvxbcvjbxjbvs bgsbjbggbs ghbfgbhd hsbhbhgbdg hbhjbghdg jjhbghdbdh arbhrrhuttbhfu hfithigt  ahsrright jaifr  ffh nitesh skimt thinghah gfbg",
+    //  service_img:"", 
+    //  service_animation:"fade-left"},
+  ]
+
       const content = [
         {
           title: "Vulputate Mollis Ultricies Fermentum Parturient",
@@ -56,11 +96,13 @@ function Landing() {
       ];
        return (
        <Fragment>
-       <DashNavbar/>
+       <ProgreeBarPage />
+       <DashNavbar />
 
        <div className="full_display_screen_windows">
          <div className="Inner_body_landing">
-           <div className="img_text" style={{width:"30%"}}>
+           <div className="img_text width_30" >
+             <div className="one"></div>
               <div className="content_landing">
                <h1 className="taglines_up" data-aos="fade-down">
                    An Idea <br/> For Better Advice
@@ -70,16 +112,16 @@ function Landing() {
                </h1>
                <br/>
               <div className="quotes_under_tagline">
-               <p className="quotes_line">Our talent, your results– this is the premise behind bdollar Solutions.Get your optimized solution .Our team follow AGILE .Our commitment to service and quality is reflected in our work</p>
+               <p className="quotes_line">Our talent, your results– this is the premise behind indinxg Solutions.Get your optimized solution .Our team follow AGILE .Our commitment to service and quality is reflected in our work</p>
               </div>
               <br/>
               <div className="btn_services">
-                 <button className="btn_services_css sol"><span>Try a solution </span> <i class="fa fa-long-arrow-right" aria-hidden="true" style={{color:"#FAAD3B"}}></i></button>
-                 <button className="btn_services_css expert"><span> Talk to expert</span> <i class="fa fa-long-arrow-right" aria-hidden="true" style={{color:"#17a2b8"}}></i></button>
+                 <button className="btn_services_css sol">Try a solution <i class="fa fa-long-arrow-right" aria-hidden="true" style={{color:"#FAAD3B"}}></i> </button>
+                 <button className="btn_services_css expert"> Talk to expert <i class="fa fa-long-arrow-right" aria-hidden="true" style={{color:"#17a2b8"}}></i></button>
               </div>
               </div>
            </div>
-           <div className="img_text" style={{width:"50%"}}>
+           <div className="img_text width_50" >
            <img src={img_landing} alt="loading.."/>
           </div>
          </div>
@@ -176,10 +218,10 @@ function Landing() {
           </div>
         <Tabs className="slide_tablist_items">
         <TabList className="slide_tablist_items_tablist" data-aos="fade-left">
-            <Tab className="slide_tablist_items_tablist_tabitem">Agile Methodology</Tab>
-            <Tab className="slide_tablist_items_tablist_tabitem">Adapting to Latest Technology</Tab>
-            <Tab className="slide_tablist_items_tablist_tabitem">Simplify System Integration</Tab>
-            <Tab className="slide_tablist_items_tablist_tabitem">Innovating and Unique Solution</Tab>
+            <Tab className="slide_tablist_items_tablist_tabitem" activeClassName="slide_tablistactive active">Agile Methodology</Tab>
+            <Tab className="slide_tablist_items_tablist_tabitem" activeClassName="slide_tablistactive active">Adapting to Latest Technology</Tab>
+            <Tab className="slide_tablist_items_tablist_tabitem" activeClassName="slide_tablistactive active">Simplify System Integration</Tab>
+            <Tab className="slide_tablist_items_tablist_tabitem" activeClassName="slide_tablistactive active">Innovating and Unique Solution</Tab>
         </TabList>
         <TabPanel className="slide_tablist_items_tablist_tabcontent" data-aos="fade-right">
             <img src={method} alt="img" />
@@ -255,94 +297,26 @@ function Landing() {
            <p>We <br/> Provide Best Solutions</p> 
        </div>
        <div className="innerbody_highlight_services_list_outter">
-         <div className="innerbody_highlight_services_list_object" data-aos="fade-left">
+       {
+         service_data.map((data,index)=>
+         <div className="innerbody_highlight_services_list_object" data-aos={data.service_animation} key={data.id}>
            <div className="innerbody_highlight_services_list_object_content">
               <div className="innerbody_highlight_services_list_object_content_head">
-               <h1>App Development</h1>
+               <h1>{data.services_name}</h1>
               </div>
               <div className="innerbody_highlight_services_list_object_content_info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
+               {data.services_deatils.slice(0,400)}    
               </div>
           </div>
           <div className="innerbody_highlight_services_list_object_img"> 
-            <img alt="loading" className="img_servicess" src={appsoft_img} />         
+            <img alt="loading" className="img_servicess" src ={require(`../../Assets/${data.service_img}`)}/> 
            </div>
         </div>
-        <div className="innerbody_highlight_services_list_object" data-aos="fade-right">
-           <div className="innerbody_highlight_services_list_object_content">
-              <div className="innerbody_highlight_services_list_object_content_head">
-               <h1>Web Development</h1>
-              </div>
-              <div className="innerbody_highlight_services_list_object_content_info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-              </div>
-          </div>
-          <div className="innerbody_highlight_services_list_object_img"> 
-            <img alt="loading" className="img_servicess" src={website_img} />                      
-        </div>
-        </div>
-        <div className="innerbody_highlight_services_list_object" data-aos="fade-left">
-           <div className="innerbody_highlight_services_list_object_content">
-              <div className="innerbody_highlight_services_list_object_content_head">
-               <h1>Digital Marketing</h1>
-              </div>
-              <div className="innerbody_highlight_services_list_object_content_info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-              </div>
-          </div>
-          <div className="innerbody_highlight_services_list_object_img"> 
-            <img alt="loading" className="img_servicess" src={digital_img} />         
-         </div>
-        </div>
-        <div className="innerbody_highlight_services_list_object" data-aos="fade-right">
-           <div className="innerbody_highlight_services_list_object_content">
-              <div className="innerbody_highlight_services_list_object_content_head">
-               <h1>Search Engine Optimization</h1>
-              </div>
-              <div className="innerbody_highlight_services_list_object_content_info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-              </div>
-          </div>
-          <div className="innerbody_highlight_services_list_object_img"> 
-            <img alt="loading" className="img_servicess" src={seo_img} />         
-          </div>
-        </div>
-        <div className="innerbody_highlight_services_list_object" data-aos="fade-left">
-           <div className="innerbody_highlight_services_list_object_content">
-              <div className="innerbody_highlight_services_list_object_content_head">
-               <h1>PC Software Development</h1>
-              </div>
-              <div className="innerbody_highlight_services_list_object_content_info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-              </div>
-          </div>
-          <div className="innerbody_highlight_services_list_object_img"> 
-            <img alt="loading" className="img_servicess" src={pcsoft_img} />               
-           </div>
-        </div>
-        <div className="innerbody_highlight_services_list_object" data-aos="fade-right">
-              
-           <div className="innerbody_highlight_services_list_object_content">
-              <div className="innerbody_highlight_services_list_object_content_head">
-               <h1>SaaS Solutions</h1>
-              </div>
-              <div className="innerbody_highlight_services_list_object_content_info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab culpa fugit odit totam distinctio ullam aperiam eius ducimus sint placeat repudiandae minus accusantium architecto, recusandae provident nam laudantium vitae?
-              </div>
-          </div>
-          <div className="innerbody_highlight_services_list_object_img"> 
-            <img alt="loading" className="img_servicess" src={saas_img} />         
-        </div>  
-        </div>
+         )
+       }
        </div>
        <div className="more_btn">
-       <button className="btn_services_css_more"><Link to="/" style={{textDecoration:"none",color:"white"}}> More Services</Link> <i class="fa fa-long-arrow-right" aria-hidden="true" style={{color:"#17a2b8"}}></i></button>
+       <button style={{textDecoration:"none",color:"white"}} className="btn_services_css sol">  More Services <i class="fa fa-long-arrow-right" aria-hidden="true" style={{color:"#FAAD3B"}}></i></button>
        </div>
       
       </div>
@@ -369,9 +343,8 @@ function Landing() {
       {content.map((item, index) => (
         <div
           key={index}
-          className="slider-content"
-          style={{ background: `url('${item.image}') no-repeat center center` }}
-        >
+          className="slider-content">
+        {/* <img src= {item.image} alt="Loading"/> */}
          <section>
             <img src={item.userProfile} alt={item.user} />
             <span>
@@ -379,8 +352,7 @@ function Landing() {
             </span>
           </section>
           <div className="inner">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
+            <p style={{fontStyle:"30px !important"}}><span className="quotes">"</span>{item.description}<span className="quotes">"</span></p>
           </div>
         </div>
       ))}

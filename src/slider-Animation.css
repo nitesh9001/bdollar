@@ -112,10 +112,10 @@
 
 /* css for testimonails  */
   .wrapper {
-    max-width: 1335px;
+    max-width: 100%;
     box-sizing: border-box;
     padding: 0 20px;
-    margin: auto;
+    margin: 0 auto;
   }
   
   .wrapper a {
@@ -129,13 +129,13 @@
   
   .slider-wrapper {
     position: relative;
-    height: 70vh;
+    height: 480px;
     box-shadow: 0 0 20px #616160, 0 0 40px #72706d;
     overflow: hidden;
   }
   
   .slide {
-    height: 70vh;
+    height: 480px;
     background-size: cover !important;
   }
   
@@ -202,18 +202,10 @@
             transition-delay: 0s;
   }
   
-  .slider-content .inner h1 {
-    font-weight: 900;
-    margin: 0 auto;
-    max-width: 840px;
-    color: #FFFFFF;
-    font-size: 64px;
-    line-height: 1;
-  }
   
   .slider-content .inner p {
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.5;
     margin: 20px auto 30px;
     max-width: 640px;
@@ -253,12 +245,17 @@
     display: block;
   }
   
-  @media (max-height: 500px) {
+
+  @media (max-width: 700px) {
     .slider-wrapper, .slide {
-      height: calc(100vh - 75px);
+      height: 600px;
+      width: 100%;
     }    
+    .slider-content .inner p{
+      font-size: 15px;
+    }
   }
-  
+   /*
   @media (max-width: 640px) {
     .slider-wrapper, .slide {
       height: calc(80vh - 75px);
@@ -276,4 +273,4 @@
       font-size: 32px;
     }
   }
-  
+   */
