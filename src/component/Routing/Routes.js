@@ -25,11 +25,11 @@ function Routes() {
     return (
         <div>
         <Switch>
-            <Route exact path="/homepage" component={Landing} />
-            <Route exact path="/login" component={ Login} />
+            <Route exact path="/indinxg" component={Landing} />
+            {/* <Route exact path="/login" component={ Login} /> */}
             <Route exact path="/contact_us" component={ ContactUs} />
             <Route exact path="/about_us_and_our_team" component={ Aboutus} />
-            <Route exact path="/register_your_institue" component={Register} />
+            {/* <Route exact path="/register_your_institue" component={Register} /> */}
             <Route exact path="/services" component={Services} />
             <Route exact path="/blog" component={Blog} />
               {/* <Route exact path="/institutedashboard" component={InstituteDashboard} />
